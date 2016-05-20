@@ -68,3 +68,32 @@ At this point you're all set. Upload the new firmware to esp8266 and, given it p
 ```
 cat /dev/ttyUSB0
 ```
+
+# Compilation Instructions
+Normally isn't required, but if for some reason you need to compile it for a different kernel version of Raspberry Pi, here it goes.
+
+## Download the CH34x Driver Sources
+On the Raspberry Pi, go to http://www.wch.cn/download/CH341SER_LINUX_ZIP.html and click that big blue **Download** button. This is the manufacturer's website, but it's all in Chinese.
+
+## Prepare the Kernel Build Environment
+```
+sudo apt-get -y install linux-headers-rpi
+sudo apt-get install rpi-update
+sudo rpi-update
+
+# reboot here, you're on the latest kernel
+
+sudo wget https://raw.githubusercontent.com/notro/rpi-source/master/rpi-source -O /usr/bin/rpi-source && sudo chmod +x /usr/bin/rpi-source && /usr/bin/rpi-source -q --tag-update
+
+sudo apt-get install bc
+sudo apt-get install libncurses5-dev
+rpi-source
+```
+
+## Build the Driver Module
+```
+# unzip the driver sources archive
+# cd into the new directory
+make
+```
+This will produce the `ch34x.ko` file, which you can install as described above.
