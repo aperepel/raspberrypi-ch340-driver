@@ -51,7 +51,7 @@ sudo depmod -a
 ```
 
 ## Plug In ESP8266
-Plug in your dev board in any the Raspberry Pi's USB port. A few things should happen. Again, look for the **340** strings:
+Plug in your dev board into any of the Raspberry Pi's USB port. A few things should happen. Again, look for the **340** strings:
 ```
 $ lsmod
 [   65.597856] usbcore: registered new interface driver ch34x
