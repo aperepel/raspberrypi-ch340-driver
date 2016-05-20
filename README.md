@@ -1,6 +1,6 @@
 # CH340/341 UART Driver for Raspberry Pi
 
-A pre-compiled binary for CH340/341 (HL340/341) Serial-to-USB UART Driver for Raspberry Pi. This is a very common chip, especially in those millions of esp8266-based dev boards (also often referred to as NodeMCU). Raspberry Pi doesn't have an out of the box driver for it, so plugging your device into RPI's USB won't do much other than power it. I found it surprisingly difficult to locate working instructions and binaries, hence this repository came to life.
+A pre-compiled binary for CH340/341 (HL340/341) USB-to-Serial UART Driver for Raspberry Pi. This is a very common chip, especially in those millions of esp8266-based dev boards (also often referred to as NodeMCU). Raspberry Pi doesn't have an out of the box driver for it, so plugging your device into RPI's USB won't do much other than power it. I found it surprisingly difficult to locate working instructions and binaries, hence this repository came to life.
 
 The driver will work both for CH340 & CH341 chips. Sometimes you will see the HL340/HL341 designation, it's just different names for the same hardware.
 
