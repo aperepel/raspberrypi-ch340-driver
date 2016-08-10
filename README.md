@@ -11,6 +11,7 @@ wget https://github.com/aperepel/raspberrypi-ch340-driver/releases/download/4.4.
 ```
 ## Install the kernel module:
 ```
+sudo modprobe usbserial
 sudo insmod ch34x.ko
 ```
 
@@ -95,5 +96,6 @@ rpi-source
 # unzip the driver sources archive
 # cd into the new directory
 make
+make load 
 ```
 This will produce the `ch34x.ko` file, which you can install as described above.
